@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>جامعة غوثية رضوية | JGR College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Amiri&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --gold: #caa54d;
+      --gold-soft: #e6c878;
+      --white: #eaeaea;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header img {
+      width: 220px;
+      margin-bottom: 25px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    header h1 {
+      color: var(--gold);
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header .arabic {
+      font-family: 'Amiri', serif;
+      font-size: 1.4rem;
+      margin-top: 10px;
+      color: var(--gold-soft);
+    }
+
+    header p {
+      max-width: 750px;
+      margin-top: 25px;
+      font-size: 1.1rem;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #050505;
+      border-bottom: 1px solid var(--gold);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeUp 1.2s ease;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .center {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #151515, #080808);
+      border: 1px solid var(--gold);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(202,165,77,0.2);
+    }
+
+    .card h3 {
+      color: var(--gold);
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #050505;
+      border-top: 1px solid var(--gold);
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header img { width: 170px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="جامعة غوثية رضوية Logo">
+  <h1>JGR College</h1>
+  <div class="arabic">جامعة غوثية رضوية</div>
+  <p>
+    A distinguished Islamic institution dedicated to the classical
+    Dars-e-Nizami curriculum, producing scholars grounded in knowledge,
+    discipline, and service to the Ummah.
+  </p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#books">Books</a>
+  <a href="#faculty">Faculty</a>
+  <a href="#impact">Impact</a>
+</nav>
+
+<section id="about">
+  <h2>About JGR College</h2>
+  <p class="center">
+    JGR College offers a rigorous and authentic Islamic education rooted in
+    the traditional Dars-e-Nizami syllabus. Our mission is to preserve sacred
+    knowledge while training students to serve communities with wisdom,
+    sincerity, and excellence.
+  </p>
+</section>
+
+<section id="books">
+  <h2>Classical Books We Teach</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Fiqh</h3>
+      <p>Al-Hidāyah, Kanz al-Daqā’iq, Usūl al-Fiqh texts</p>
+    </div>
+    <div class="card">
+      <h3>Hadith</h3>
+      <p>Sahih al-Bukhari, Sahih Muslim, Mishkat al-Masabih</p>
+    </div>
+    <div class="card">
+      <h3>Tafsir</h3>
+      <p>Tafsir al-Jalalayn, classical Qur’anic commentaries</p>
+    </div>
+    <div class="card">
+      <h3>Arabic Sciences</h3>
+      <p>Al-Kāfiyah, Sharh Jami, Sarf & Nahw mastery</p>
+    </div>
+  </div>
+</section>
+
+<section id="faculty">
+  <h2>Our Faculty & Expertise</h2>
+  <p class="center">
+    Our lead teacher has over <strong>25 years of teaching experience</strong>
+    and has studied under renowned scholars of the Ahl al-Sunnah tradition.
+    Our faculty combines deep scholarship with spiritual mentorship,
+    ensuring students receive authentic and well-rounded Islamic education.
+  </p>
+  <br>
+  <p class="center">
+    JGR College has also published scholarly works through
+    <strong>Jamaat Raza-e-Mustafa</strong>, contributing to the preservation
+    and dissemination of Sunni Islamic knowledge.
+  </p>
+</section>
+
+<section id="impact">
+  <h2>Our Impact</h2>
+  <p class="center">
+    By the grace of Allah, our graduates are now teaching in mosques and
+    institutions across the <strong>North West</strong>, leading prayers,
+    delivering lessons, and serving the Ummah with sound knowledge and
+    exemplary character.
+  </p>
+</section>
+
+<footer>
+  © 2026 JGR College • Serving Sacred Knowledge with Excellence
+</footer>
+
+</body>
+</html>
