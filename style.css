@@ -1,0 +1,104 @@
+:root {
+    --primary-color: #064e3b; /* Deep Islamic Green */
+    --accent-color: #d4af37;  /* Gold */
+    --text-light: #f3f4f6;
+    --text-dark: #1f2937;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fafaf9;
+    overflow-x: hidden;
+}
+
+/* Sidebar Navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 3px solid var(--accent-color);
+}
+
+.sidenav a {
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: var(--accent-color);
+    padding-left: 45px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Header & Menu Icon */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(6, 78, 59, 0.8), rgba(6, 78, 59, 0.8)), url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; border-bottom: 2px solid var(--accent-color); }
+
+/* Content Sections */
+.container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-color);
+}
+
+h2 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+ul { list-style: none; padding: 0; }
+li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+li::before { content: "• "; color: var(--accent-color); font-weight: bold; }
+
+footer { background: var(--primary-color); color: white; text-align: center; padding: 20px; margin-top: 50px; }
